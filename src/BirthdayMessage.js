@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Confetti from 'react-confetti';
-import { motion } from 'framer-motion';
 
 const StyledMessage = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Amatic SC', cursive;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
   font-size: 4em;
   color: #f08080;
   text-shadow: 2px 2px 0px rgba(255, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   animation: shine 2s infinite alternate;
   text-align: center;
 
@@ -27,11 +33,10 @@ const Characteristic = styled.span`
   margin: 0 10px;
   font-weight: bold;
   text-align: center;
-  font-size: 1.2em;
-  // background-color: #f0f0f0;
+  font-size: 2em;
+  color: gold;
   border-radius: 5px;
   padding: 5px;
-  // box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   animation: changeColor 3s infinite alternate;
 
   @keyframes changeColor {
@@ -68,7 +73,7 @@ function BirthdayMessage() {
     setTimeout(() => setIsConfettiActive(false), 3000);
 
     return () => clearInterval(intervalId); // Cleanup interval on unmount
-  }, []);
+  }, [characteristics.length]);
 
   const characteristicVariants = {
     enter: (opacity = 0) => ({ opacity }),
