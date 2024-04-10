@@ -22,16 +22,16 @@ const StyledMessage = styled.h1`
   }
 `;
 
-const Characteristic = styled(motion.span)`
+const Characteristic = styled.span`
   display: inline-block;
   margin: 0 10px;
-  font-weight: bold;  /* Add emphasis to the characteristic word */
+  font-weight: bold;
   text-align: center;
   font-size: 1.2em;
-  background-color: #f0f0f0;
+  // background-color: #f0f0f0;
   border-radius: 5px;
   padding: 5px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   animation: changeColor 3s infinite alternate;
 
   @keyframes changeColor {
@@ -79,7 +79,7 @@ function BirthdayMessage() {
     <div className="birthday-message">
       <StyledMessage>
         {message.split('').map((char, index) => (
-          <Characteristic key={index} style={{backgroundColor: 'lightblue'}}>{char}</Characteristic>
+          <Characteristic key={index}>{char}</Characteristic>
         ))}
       </StyledMessage>
       <br />
