@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import Balloon from './Balloon';
 import cake from './img/cake.jpg';
 // import bdGirl from './img/birthday_girl.jpg';
 import example from './img/example_girl.jpg';
 import Stars from './Stars';
+import { useState } from 'react';
 
 const BirthdayDecorationStyle = styled.div`
   position: fixed;
@@ -14,19 +16,6 @@ const BirthdayDecorationStyle = styled.div`
   justify-content: center;
   align-items: center;
   z-index: -1; /* Ensures background stays behind content */
-`;
-
-const Balloon = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #f08080; /* Pink */
-  margin: 0 10px;
-  animation: float 3s infinite ease-in-out alternate;
-  @keyframes float {
-    from { transform: translateY(0px); }
-    to { transform: translateY(20px); }
-  }
 `;
 
 const Cake = styled.img`
@@ -96,32 +85,38 @@ const renderStars = (numStars) => {
   return stars;
 };
 
-const BirthdayDecoration = () => (
-  <BirthdayDecorationStyle>
-    <Stars />
-    <img
-      src={example}
-      alt="Birthday Person"
-      style={{
-        width: '400px', // Adjust width as needed
-        height: '300px', // Adjust height as needed
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        borderRadius: '15px',
-        transform: 'translate(-50%, -50%)',
-        zIndex: -1, // Ensure image stays behind text
-      }}
-    />
-    <Cake src={cake} alt="Birthday Cake" />
-    {Array(5).fill(null).map((_, index) => <Balloon key={index} />)}
-    <div style={{ display: 'flex', gap: '10px' }}>
-      {Array(3).fill(null).map((_, index) => <Candle key={index} />)}
-    </div>
-    <StarsContainer>
-      {renderStars(100)}  {/* Adjust number of stars as desired */}
-    </StarsContainer>
-  </BirthdayDecorationStyle>
-);
+const BirthdayDecoration = () => {
+  const [balloons] = useState([1, 2, 3]); // Array for number of balloons
+
+  return (
+    <BirthdayDecorationStyle>
+      <Stars />
+      <img
+        src={example}
+        alt="Birthday Person"
+        style={{
+          width: '400px', // Adjust width as needed
+          height: '300px', // Adjust height as needed
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          borderRadius: '15px',
+          transform: 'translate(-50%, -50%)',
+          zIndex: -1, // Ensure image stays behind text
+        }}
+      />
+      <Cake src={cake} alt="Birthday Cake" />
+      {balloons.map((_, index) => (
+        <Balloon key={index} color={`#${Math.floor(Math.random() * 16777215).toString(16)}`} />
+      ))}
+      <div style={{ display: 'flex', gap: '10px' }}>
+        {Array(3).fill(null).map((_, index) => <Candle key={index} />)}
+      </div>
+      <StarsContainer>
+        {renderStars(100)}  {/* Assuming Stars component accepts a "count" prop */}
+      </StarsContainer>
+    </BirthdayDecorationStyle>
+  );
+};
 
 export default BirthdayDecoration;
