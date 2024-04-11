@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Confetti from 'react-confetti';
 
 const StyledMessage = styled.h1`
   display: flex;
@@ -52,7 +51,6 @@ const Characteristic = styled.span`
 function BirthdayMessage() {
   const [message, setMessage] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isConfettiActive, setIsConfettiActive] = useState(false);
   const characteristics = [
     'Amazing',
     'Beautiful',
@@ -63,14 +61,10 @@ function BirthdayMessage() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % characteristics.length);
+      setCurrentIndex((prev) => (prev + 1) % characteristics.length);
     }, 3000);
 
     setMessage('Happy Birthday!');
-    setIsConfettiActive(true);
-
-    // Simulate confetti animation for a few seconds
-    setTimeout(() => setIsConfettiActive(false), 3000);
 
     return () => clearInterval(intervalId); // Cleanup interval on unmount
   }, [characteristics.length]);
@@ -98,7 +92,6 @@ function BirthdayMessage() {
       >
         {characteristics[currentIndex]}
       </Characteristic>
-      {isConfettiActive && <Confetti />}
     </div>
   );
 }
