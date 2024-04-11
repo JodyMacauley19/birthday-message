@@ -1,54 +1,55 @@
 import React, { useState, useEffect } from 'react';
-import StyledMessage from '../StyledMessage';
-import Characteristic from '../Characteristic';
+import Characteristic from '../Characteristic'; // Updated Characteristic component
+import { motion } from 'framer-motion'; // Import Framer Motion for animations
+import { characteristicVariants } from '../characteristicVariants';
 
 
-function BirthdayMessage() {
-  const [message, setMessage] = useState('');
+const BirthdayMessage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const characteristics = [
-    'Amazing',
-    'Beautiful',
-    'Strong',
+    'Creative',
     'Intelligent',
+    'Funny',
     'Kind',
+    'Adventurous',
   ];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % characteristics.length);
-    }, 3000);
-
-    setMessage('Happy Birthday!');
-
-    return () => clearInterval(intervalId); // Cleanup interval on unmount
-  }, [characteristics.length]);
-
-  const characteristicVariants = {
-    enter: (opacity = 0) => ({ opacity }),
-    exit: (opacity = 0) => ({ opacity }),
+  const handleNextCharacteristic = () => {
+    setCurrentIndex((prevState) => (prevState + 1) % characteristics.length);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(handleNextCharacteristic, 3000); // Change every 3 seconds
+    return () => clearInterval(intervalId); // Clear interval on unmount
+  }, []);
 
   return (
     <div className="birthday-message">
-      <StyledMessage>
-        {message.split('').map((char, index) => (
-          <Characteristic key={index}>{char}</Characteristic>
-        ))}
-      </StyledMessage>
+      {/* Static Happy Birthday Message */}
+      <motion.h1
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+        transition={{ duration: 1 }} // Fade in animation for "Happy Birthday"
+      >
+        Happy Birthday
+      </motion.h1>
       <br />
-      {/* Renders the current characteristic directly */}
+
+      {/* Animated Characteristic Text */}
       <Characteristic
         variants={characteristicVariants}
         initial="enter"
         animate="exit"
         exit="enter"
         transition={{ duration: 1 }}
-      >
-        {characteristics[currentIndex]}
-      </Characteristic>
+        children={characteristics[currentIndex]}
+      />
     </div>
   );
-}
+};
 
 export default BirthdayMessage;

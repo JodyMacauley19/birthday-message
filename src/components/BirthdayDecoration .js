@@ -2,7 +2,6 @@ import { useState } from 'react';
 import BirthdayDecorationStyle from '../BirthdayDecorationStyle';
 import StarsContainer from '../StarsContainer';
 import Star from '../Star';
-import Balloon from './Balloon';
 // import bdGirl from './img/birthday_girl.jpg';
 import example from '../img/example_girl.jpg';
 import Stars from './Stars';
@@ -22,7 +21,6 @@ const renderStars = (numStars) => {
 };
 
 const BirthdayDecoration = () => {
-  const [balloons] = useState([1, 2, 3]); // Array for number of balloons
 
   return (
     <BirthdayDecorationStyle>
@@ -41,9 +39,6 @@ const BirthdayDecoration = () => {
           zIndex: -1, // Ensure image stays behind text
         }}
       />
-      {balloons.map((_, index) => (
-        <Balloon key={index} color={`#${Math.floor(Math.random() * 16777215).toString(16)}`} />
-      ))}
       <StarsContainer>
         {renderStars(100)}  {/* Assuming Stars component accepts a "count" prop */}
       </StarsContainer>

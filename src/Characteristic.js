@@ -1,24 +1,21 @@
-import styled from 'styled-components';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap styles
+import { motion } from 'framer-motion';
+import { characteristicVariants } from './characteristicVariants';
 
-const Characteristic = styled.span`
-  display: inline-block;
-  margin: 0 10px;
-  font-weight: bold;
-  text-align: center;
-  font-size: 2em;
-  color: gold;
-  border-radius: 5px;
-  padding: 5px;
-  animation: changeColor 3s infinite alternate;
-
-  @keyframes changeColor {
-    from {
-      color: #f08080;
-    }
-    to {
-      color: #ff0;
-    }
-  }
-`;
+const Characteristic = ({ children }) => {
+    return (
+        <motion.h1
+            className="text-center display-1 fw-bold text-gradient"
+            variants={characteristicVariants} // Access from BirthdayMessage.js
+            initial="enter"
+            animate="exit"
+            exit="enter"
+            transition={{ duration: 1 }}
+        >
+            {children}
+        </motion.h1>
+    );
+};
 
 export default Characteristic;
