@@ -1,6 +1,6 @@
 import React from 'react';
-import BirthdayMessage from './BirthdayMessage';
-import BirthdayDecoration from './BirthdayDecoration ';
+import BirthdayMessage from './components/BirthdayMessage';
+import BirthdayDecoration from './components/BirthdayDecoration ';
 
 function App() {
   return (
