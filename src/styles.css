@@ -1,32 +1,3 @@
-.BirthdayGreetingContainer {
-  /* Existing styles... */
-  width: 100vw; /* Set width to viewport width (optional) */
-  height: 100vh; /* Set height to viewport height (optional) */
-  overflow: hidden; /* Hides overflowing content (optional) */
-}
-
-.greeting-enter {
-  opacity: 0; /* Starts invisible */
-}
-
-.greeting-enter-active {
-  opacity: 1; /* Animates to opacity 1 */
-  transition: opacity 0.5s ease-in-out; /* Animation details */
-}
-
-.BirthdayGirlImage {
-  /* Existing styles... */
-  position: absolute; /* Absolute positioning within .greeting-content */
-  top: 100%; /* Position vertically at 50% (adjust if needed) */
-  transform: translateY(-50%); /* Center vertically based on its own size */
-  width: 100%; /* Adjust image width as needed */
-}
-.HappyBirthdayMessage {
-  /* Styles for the message component */
-  /* Adjust font size, color, etc. */
-  margin-top: 10px; /* Add spacing between image and message */
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -44,24 +15,6 @@ body {
   font-size: 200px;
 }
 
-.clickable-l {
-  cursor: pointer; /* Change cursor to pointer on hover */
-  color: pink; /* Optional: Style the 'L' differently */
-  /* Add transition for Option 1 (remove if using Option 2)  */
-  transition: transform 0.2s ease-in-out;
-}
-
-.clickable-l:hover {
-  /* Option 1: Inline styles (remove if using Option 2)  */
-  transform: scale(1.1); /* Scale up on hover (adjust as needed) */
-
-  /* Option 2: Using CSS class (remove if using Option 1)  */
-  transform: scale(1.1); /* Scale up on hover (adjust as needed) */
-  /* Add additional hover effects here (e.g., text-shadow) */
-}
-
-/*  */
-
 .word-enter {
   opacity: 0;
 }
@@ -69,40 +22,4 @@ body {
 .word-enter-active {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-}
-
-.greeting-content {
-  position: absolute; /* Ensures absolute positioning within parent */
-  top: 50%; /* Center vertically (adjust if needed) */
-  left: 50%; /* Center horizontally (adjust if needed) */
-  transform: translate(-50%, -50%); /* Center based on its own size */
-  /* Other styles for spacing, etc. */
-}
-
-.birthday-message {
-  /* Existing styles... */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a drop shadow */
-}
-
-.birthday-words-container {
-  /* Existing styles... */
-  position: absolute; /* Ensures absolute positioning within container */
-  top: 0; /* Position to the top */
-  left: 0; /* Position to the left */
-  width: 100%; /* Covers entire container width */
-  height: 100%; /* Covers entire container height */
-  z-index: -1; /* Place behind other content (optional) */
-}
-
-.brick-background {
-  /* Existing styles for positioning and background color */
-  color: #f0f0f0; /* Optional background color */
-}
-
-.brick-background .col {
-  /* Existing styles for borders and margins (optional) */
-  padding: 0; /* Remove padding for the content row */
-  border: none; /* Remove borders for the content row */
-  margin: 0; /* Remove margins for the content row */
-  background-color: transparent; /* Transparent background for text */
 }

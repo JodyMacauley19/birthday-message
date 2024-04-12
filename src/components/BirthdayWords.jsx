@@ -1,5 +1,7 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
+import styles from '../styles/BirthdayWords.module.css';
+
 
 const BirthdayWords = () => {
   const words = [
@@ -30,7 +32,6 @@ const BirthdayWords = () => {
     const baseStyle = {
       fontSize: `${Math.floor(20 + Math.random() * 100)}px`,
       color: index % 2 === 0 ? "black" : "pink",
-      transition: "opacity 0.5s ease-in-out",
     };
 
     const layoutStyles = {
@@ -41,7 +42,7 @@ const BirthdayWords = () => {
       textAlign: 'center'
     };
 
-    return {...baseStyle, ...layoutStyles};
+    return {...baseStyle, ...layoutStyles, className: styles['birthday-word']};
   };
 
   return (

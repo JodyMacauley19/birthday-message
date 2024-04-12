@@ -1,0 +1,22 @@
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text {
+  font-size: 200px; /* Adjust font size as needed */
+}
+
+.clickable-L {
+  cursor: pointer;
+  color: pink; /* Optional style for the 'L' */
+
+  /* Animation Styles */
+  transition: transform 0.2s ease-in-out; /* Transition properties */
+}
+
+.clickable-l:hover {
+  transform: scale(1.1); /* Hover animation effect */
+}

@@ -1,0 +1,9 @@
+.birthday-wish {
+    /* Text styles */
+    font-style: italic; /* Italic font for a more personal touch */
+    font-size: 1.5em; /* Adjust font size as needed */
+    text-align: center; /* Center the text */
+    color: #333; /* Dark gray color (adjust as needed) */
+    /* Add line spacing for readability (optional) */
+    line-height: 1.5;
+  }

@@ -1,0 +1,37 @@
+.BirthdayGreetingContainer {
+    /* Existing styles... */
+    width: 100vw; /* Set width to viewport width (optional) */
+    height: 100vh; /* Set height to viewport height (optional) */
+    overflow: hidden; /* Hides overflowing content (optional) */
+  }
+
+  .greeting-content {
+    position: absolute; /* Ensures absolute positioning within parent */
+    top: 50%; /* Center vertically (adjust if needed) */
+    left: 50%; /* Center horizontally (adjust if needed) */
+    transform: translate(-50%, -50%); /* Center based on its own size */
+    /* Other styles for spacing, etc. */
+  }
+  
+  .greeting {
+    /* Animation styles for entrance/exit (inherited from styles.css) */
+    animation: greeting-animation 2s ease-in-out forwards; /* Define animation here */
+  }
+  
+  @keyframes greeting-animation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .greeting-enter {
+    opacity: 0; /* Starts invisible */
+  }
+  
+  .greeting-enter-active {
+    opacity: 1; /* Animates to opacity 1 */
+    transition: opacity 0.5s ease-in-out; /* Animation details */
+  }

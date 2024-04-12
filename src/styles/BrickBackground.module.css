@@ -1,0 +1,13 @@
+.brick-background {
+    /* Existing styles for positioning and background color */
+    color: #f0f0f0; /* Optional background color */
+  }
+  
+  .brick-background .col {
+    /* Existing styles for borders and margins (optional) */
+    padding: 0; /* Remove padding for the content row */
+    border: none; /* Remove borders for the content row */
+    margin: 0; /* Remove margins for the content row */
+    background-color: transparent; /* Transparent background for text */
+  }
+  

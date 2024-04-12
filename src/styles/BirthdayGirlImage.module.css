@@ -1,0 +1,9 @@
+.BirthdayGirlImage {
+  /* Image styles */
+  display: block; /* Ensure image takes up full width */
+  margin: 0 auto; /* Center the image horizontally */
+  width: 70%; /* Adjust image width as needed */
+  border-radius: 70%; /* Add a circular border */
+  /* Add box-shadow for depth (optional) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

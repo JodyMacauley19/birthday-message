@@ -1,10 +1,11 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import BirthdayWords from './BirthdayWords';
+import styles from '../styles/BrickBackground.module.css';
 
 const BrickBackground = () => {
   return (
-    <Container fluid className='brick-background'>
+    <Container fluid className={styles['brick-background']}>
         <Row>
             <Col><BirthdayWords/></Col>
         </Row>

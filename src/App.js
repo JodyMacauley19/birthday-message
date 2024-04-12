@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
 import TextComponent from "./components/TextComponent";
 import HappyBirthdayMessage from "./components/HappyBirthdayMessage";
 import ConfettiComponent from "./components/ConfettiComponent";
-import BirthdayWords from "./components/BirthdayWords";
 import BirthdayGirlImage from "./components/BirthdayGirlImage";
 import BirthdayWish from "./components/BirthdayWish";
 import BrickBackground from "./components/BrickBackground";
+import BirthdayGreetingContainer from './components/BirthdayGreetingContainer';
 import "./styles.css";
 
 const App = () => {
@@ -17,33 +16,23 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <div className="container">
       {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
       {showBirthdayGreeting && (
-        <div>
-          <BrickBackground/>
-          <BirthdayGreetingContainer>
-            <div className="greeting-content">
-              <ConfettiComponent />
-              <HappyBirthdayMessage />
-              <BirthdayGirlImage />
-              <BirthdayWish />
-            </div>
-          </BirthdayGreetingContainer>
-        </div>
+          <div className="row justify-content-center">
+            <ConfettiComponent />
+            <BrickBackground />
+            <BirthdayGreetingContainer>
+              <div className="greeting-content">
+                <HappyBirthdayMessage />
+                <BirthdayGirlImage />
+                <BirthdayWish />
+              </div>
+            </BirthdayGreetingContainer>
+          </div>
       )}
     </div>
   );
 };
 
 export default App;
-
-const BirthdayGreetingContainer = ({ children }) => (
-  <CSSTransition
-    in={true} //Always animate in
-    timeout={2000} //Adjust animation duration
-    classNames="greeting"
-  >
-    {children}
-  </CSSTransition>
-);
