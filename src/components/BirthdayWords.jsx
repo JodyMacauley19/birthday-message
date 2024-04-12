@@ -5,8 +5,6 @@ import styles from '../styles/BirthdayWords.module.css';
 
 const BirthdayWords = () => {
   const words = [
-    "Happy",
-    "Birthday",
     "Awesome",
     "Fantastic",
     "Wonderful",
@@ -26,23 +24,32 @@ const BirthdayWords = () => {
     "Telephilia",
     "K-popers",
     "K-drama fan",
+    "Fun",
+    "Well-expressed",
+    "Leo",
+    "Hard worker",
+    "Disciplined",
+    "Jennie",
+    "Lisa",
+    "Rosé",
+    "Jisoo",
+    "BOOMBAYAH",
+    "DDU-DU DDU-DU",
+    "Kill This Love"
   ];
 
   const wordStyle = (index) => {
-    const baseStyle = {
-      fontSize: `${Math.floor(20 + Math.random() * 100)}px`,
-      color: index % 2 === 0 ? "black" : "pink",
-    };
-
-    const layoutStyles = {
-      position: "relative",
+    const fontSize = `${Math.floor(20 + Math.random() * 80)}px`;
+    const colorClass = index % 2 === 0 ? styles['birthday-word--black'] : styles['birthday-word--pink'];
+  
+    return {
+      fontSize,
       display: 'inline-block',
       margin: '20px',
       width: 'fit-content',
-      textAlign: 'center'
+      textAlign: 'center',
+      className: `${styles['birthday-word']} ${colorClass}`,
     };
-
-    return {...baseStyle, ...layoutStyles, className: styles['birthday-word']};
   };
 
   return (

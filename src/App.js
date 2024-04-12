@@ -5,7 +5,7 @@ import ConfettiComponent from "./components/ConfettiComponent";
 import BirthdayGirlImage from "./components/BirthdayGirlImage";
 import BirthdayWish from "./components/BirthdayWish";
 import BrickBackground from "./components/BrickBackground";
-import BirthdayGreetingContainer from './components/BirthdayGreetingContainer';
+import BirthdayGreetingContainer from "./components/BirthdayGreetingContainer";
 import "./styles.css";
 
 const App = () => {
@@ -16,9 +16,9 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
-      {showBirthdayGreeting && (
+      <div className="container">
+        {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
+        {showBirthdayGreeting && (
           <div className="row justify-content-center">
             <ConfettiComponent />
             <BrickBackground />
@@ -30,8 +30,8 @@ const App = () => {
               </div>
             </BirthdayGreetingContainer>
           </div>
-      )}
-    </div>
+        )}
+      </div>
   );
 };
 

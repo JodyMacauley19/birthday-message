@@ -7,6 +7,7 @@
 
 .text {
   font-size: 200px; /* Adjust font size as needed */
+  z-index: 1;
 }
 
 .clickable-L {
@@ -19,4 +20,18 @@
 
 .clickable-l:hover {
   transform: scale(1.1); /* Hover animation effect */
+}
+
+.blackpink-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://e0.pxfuel.com/wallpapers/2/499/desktop-wallpaper-blackpink-concert-concert.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  filter: blur(2px);
+  z-index: -1;
 }
