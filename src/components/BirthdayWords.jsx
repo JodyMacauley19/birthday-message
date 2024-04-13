@@ -35,11 +35,26 @@ const BirthdayWords = () => {
     "Jisoo",
     "BOOMBAYAH",
     "DDU-DU DDU-DU",
-    "Kill This Love"
+    "Kill This Love",
+    "Motivator",
+    "Inspires",
+    "Ambitious",
+    "Admirable",
+    "Considerate",
+    "Knowledgeable",
+    "Resilient",
+    "Clever",
+    "Diligent",
+    "Direct",
+    "Faithful",
+    "Funny",
+    "Passionate",
+    "Warmhearted",
+    "Law Student"
   ];
 
   const wordStyle = (index) => {
-    const fontSize = `${Math.floor(20 + Math.random() * 80)}px`;
+    const fontSize = `${Math.floor(20 + Math.random() * 70)}px`;
     const colorClass = index % 2 === 0 ? styles['birthday-word--black'] : styles['birthday-word--pink'];
   
     return {

@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "../styles/BirthdayGreetingContainer.module.css";
+import HappyBirthdayMessage from "./HappyBirthdayMessage";
+import BirthdayGirlImage from "./BirthdayGirlImage";
+import BirthdayWish from "./BirthdayWish";
 
-const BirthdayGreetingContainer = ({ children }) => (
-  <div className={styles["greeting-content"]}>{children}</div>
+const BirthdayGreetingContainer = () => (
+  <div className={styles["greeting-content"]}>
+    <HappyBirthdayMessage />
+    <BirthdayGirlImage />
+    <BirthdayWish />
+  </div>
 );
 
 export default BirthdayGreetingContainer;

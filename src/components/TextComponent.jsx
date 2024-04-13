@@ -12,6 +12,7 @@ const TextComponent = ({ handleClick }) => {
           </span>
           ACKPINK
         </h1>
+        <p className={styles["song-lyric"]}>I'm going solo-lo-lo-lo-lo-lo</p>
       </div>
     </div>
   );
