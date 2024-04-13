@@ -6,6 +6,7 @@ import BirthdayGirlImage from "./components/BirthdayGirlImage";
 import BirthdayWish from "./components/BirthdayWish";
 import BrickBackground from "./components/BrickBackground";
 import BirthdayGreetingContainer from "./components/BirthdayGreetingContainer";
+import styles from "./styles/BirthdayGreetingContainer.module.css";
 import "./styles.css";
 
 const App = () => {
@@ -16,12 +17,12 @@ const App = () => {
   };
 
   return (
-      <div className="container">
-        {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
-        {showBirthdayGreeting && (
-          <div className="row justify-content-center">
-            <ConfettiComponent />
-            <BrickBackground />
+    <div className="container">
+      {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
+      {showBirthdayGreeting && (
+        <div className="row justify-content-center">
+          <ConfettiComponent />
+          <BrickBackground />
             <BirthdayGreetingContainer>
               <div className="greeting-content">
                 <HappyBirthdayMessage />
@@ -29,9 +30,9 @@ const App = () => {
                 <BirthdayWish />
               </div>
             </BirthdayGreetingContainer>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
+    </div>
   );
 };
 

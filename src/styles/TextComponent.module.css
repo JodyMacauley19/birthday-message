@@ -1,4 +1,9 @@
 .text-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  transition: 100ms backdrop-filter linear;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,15 +28,21 @@
 }
 
 .blackpink-background {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   background-image: url('https://e0.pxfuel.com/wallpapers/2/499/desktop-wallpaper-blackpink-concert-concert.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  filter: blur(2px);
-  z-index: -1;
+}
+
+.blackpink-background:hover {
+  filter: none;
+}
+
+.text-container h1 {
+  color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
