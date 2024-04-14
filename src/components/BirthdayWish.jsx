@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import styles from '../styles/BirthdayWish.module.css';
-import {motion} from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 
 const wishes = [
   "Wishing you all the best on your birthday!",
@@ -13,13 +13,6 @@ const wishes = [
 const BirthdayWish = () => {
   const [currentWishIndex, setCurrentWishIndex] = useState(0);
 
-  const fade = {
-    opacity: 1,
-    initial: {opacity: 0},
-    animate: {opacity: 1},
-    transition: {duration: 1, ease: "easeInOut"}
-  }
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentWishIndex((prevIndex) => (prevIndex + 1) % wishes.length);
@@ -29,10 +22,18 @@ const BirthdayWish = () => {
   }, []);
 
   return (
-    <motion.p className={styles['birthday-wish']} animate={fade} key={currentWishIndex}>
+    <AnimatePresence>
+      <motion.p 
+    className={styles['birthday-wish']} 
+    initial={{opacity: 0}} 
+    animate={{opacity: 1}} 
+    transition={{duration: 3, ease: "easeInOut"}}
+    key={currentWishIndex}>
       {wishes[currentWishIndex]}
     </motion.p>
+    </AnimatePresence>
+    
   );
 };
 
-export default BirthdayWish;
+export default memo(BirthdayWish);

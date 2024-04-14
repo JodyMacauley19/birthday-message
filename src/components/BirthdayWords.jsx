@@ -53,9 +53,10 @@ const BirthdayWords = () => {
     "Law Student"
   ];
 
+  let color = '';
   const wordStyle = (index) => {
     const fontSize = `${Math.floor(20 + Math.random() * 70)}px`;
-    const colorClass = index % 2 === 0 ? styles['birthday-word--black'] : styles['birthday-word--pink'];
+    color = index % 2 === 0 ? 'black' : 'pink';
   
     return {
       fontSize,
@@ -63,16 +64,14 @@ const BirthdayWords = () => {
       margin: '20px',
       width: 'fit-content',
       textAlign: 'center',
-      className: `${styles['birthday-word']} ${colorClass}`,
+      color,
     };
   };
 
   return (
     <div className="birthday-words-container">
       {words.map((word, index) => (
-        <CSSTransition key={word} timeout={100} classNames={word}>
-          <span style={wordStyle(index)}>{word}</span>
-        </CSSTransition>
+          <span key={index} style={wordStyle(index)}>{word}</span>
       ))}
     </div>
   );

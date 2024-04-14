@@ -1,3 +1,10 @@
+.birthday-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 120vh;
+  justify-content: space-between;
+}
+
 .BirthdayGreetingContainer {
     /* Existing styles... */
     width: 100vw; /* Set width to viewport width (optional) */
@@ -11,6 +18,7 @@
     left: 50%; /* Center horizontally (adjust if needed) */
     transform: translate(-50%, -50%); /* Center based on its own size */
     /* Other styles for spacing, etc. */
+    margin-bottom: 50px;
   }
   
   .greeting {

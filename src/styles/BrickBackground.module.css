@@ -1,6 +1,6 @@
 .brick-background {
     /* Existing styles for positioning and background color */
-    color: #f0f0f0; /* Optional background color */
+    opacity: 0.6;
   }
   
   .brick-background .col {
@@ -9,5 +9,6 @@
     border: none; /* Remove borders for the content row */
     margin: 0; /* Remove margins for the content row */
     background-color: transparent; /* Transparent background for text */
+    
   }
   

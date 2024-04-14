@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/TextComponent.module.css";
+import {motion, AnimatePresence} from 'framer-motion';
 
 const TextComponent = ({ handleClick }) => {
   return (
@@ -12,7 +13,21 @@ const TextComponent = ({ handleClick }) => {
           </span>
           ACKPINK
         </h1>
-        <p className={styles["song-lyric"]}>I'm going solo-lo-lo-lo-lo-lo</p>
+        <div className={styles["lyric-container"]}>
+          <AnimatePresence>
+          <span className={styles['musical-note']}>&#9835; </span>
+          <motion.span 
+          className={styles.lyric}
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 1, ease: "easeInOut"}}
+          key="song lyric"
+          >'Cause we got bodies on bodies like this a slow dance
+          </motion.span>
+          <span className={styles['musical-note']}> &#9835;</span>
+          </AnimatePresence>
+        </div>
+        
       </div>
     </div>
   );

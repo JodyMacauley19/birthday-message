@@ -10,6 +10,24 @@
   text-align: center;
 }
 
+.lyric-container {
+  margin-top: 200px;
+  font-size: 15px; /* Adjust lyric size as needed */
+  font-weight: bold;
+}
+
+.musical-note {
+  font-size: 14px; /* Adjust musical note size as needed */
+  margin-left: auto; /* Add some space between note and lyric */
+  color: azure;
+}
+
+.lyric {
+  font-style: italic; /* Consider italicizing the lyric text */
+  color: azure;
+}
+
+/* <p className={styles["song-lyric"]}></p> */
 .song-lyric {
   position: relative;
   display: flex;
@@ -19,13 +37,20 @@
   font-size: 20px;
   font-style: italic;
   font-family: 'cursive';
-  padding-bottom: 10%;
+  padding-top: 10%;
   color: rgb(255, 0, 179); /* Optional style for the 'L' */
 }
 
 .text {
   font-size: 200px; /* Adjust font size as needed */
   z-index: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.additionalText {
+  font-size: inherit;
 }
 
 .clickable-L {

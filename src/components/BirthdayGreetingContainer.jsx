@@ -5,9 +5,11 @@ import BirthdayGirlImage from "./BirthdayGirlImage";
 import BirthdayWish from "./BirthdayWish";
 
 const BirthdayGreetingContainer = () => (
-  <div className={styles["greeting-content"]}>
-    <HappyBirthdayMessage />
-    <BirthdayGirlImage />
+  <div className={styles["birthday-container"]}>
+    <div className={styles["greeting-content"]}>
+      <HappyBirthdayMessage />
+      <BirthdayGirlImage />
+    </div>
     <BirthdayWish />
   </div>
 );

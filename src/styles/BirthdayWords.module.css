@@ -11,11 +11,3 @@
     height: 100%; /* Covers entire container height */
     z-index: -1; /* Place behind other content (optional) */
   }
-  
-  .birthday-word--black {
-    color: black;
-  }
-  
-  .birthday-word--pink {
-    color: pink;
-  }
