@@ -1,6 +1,6 @@
 .text-container {
   position: relative;
-  height: 100%;
+  height: 60%;
   width: 100%;
   backdrop-filter: blur(2px);
   transition: 100ms backdrop-filter linear;
@@ -68,7 +68,7 @@
 .blackpink-background {
   width: 100vw;
   height: 100vh;
-  background-image: url('https://e0.pxfuel.com/wallpapers/2/499/desktop-wallpaper-blackpink-concert-concert.jpg');
+  /* background-image: url('https://e0.pxfuel.com/wallpapers/2/499/desktop-wallpaper-blackpink-concert-concert.jpg'); */
   background-size: cover;
 }
 
