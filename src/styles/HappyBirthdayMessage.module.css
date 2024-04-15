@@ -3,6 +3,7 @@
   font-family: cursive; /* Choose a decorative font */
   font-size: 6em; /* Adjust font size as needed */
   text-align: center; /* Center the text */
-  color: #d400ff; /* Orange color (adjust as needed) */
+  color: rgb(255, 117, 140); /* Orange color (adjust as needed) */
   margin-bottom: 1rem; /* Add some space below the message */
+  text-shadow: rgb(39, 39, 39) 1px 0 10px;
 }

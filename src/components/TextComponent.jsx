@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/TextComponent.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import blackpingBG from "../img/blackpink.jpg";
+import blackpinkBG from "../img/blackpink.jpg";
 import btsBG from "../img/bts.webp";
 import babymonsterBG from "../img/babymonster.webp";
 
-const kpopGroupImages = [blackpingBG, btsBG, babymonsterBG];
+const kpopGroupImages = [blackpinkBG, btsBG, babymonsterBG];
 
 const TextComponent = ({ handleClick }) => {
   const [backgroundImage, setBackgroundImage] = useState("");

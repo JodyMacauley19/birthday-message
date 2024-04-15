@@ -55,7 +55,7 @@ const BirthdayWords = () => {
 
   const wordStyle = (index) => {
     const fontSize = `${Math.floor(20 + Math.random() * 70)}px`;
-    const color = index % 2 === 0 ? 'black' : 'pink';
+    const color = index % 2 === 0 ? 'grey' : 'grey';
   
     return {
       fontSize,
@@ -63,12 +63,12 @@ const BirthdayWords = () => {
       margin: '20px',
       width: 'fit-content',
       textAlign: 'center',
-      color,
+      color
     };
   };
 
   return (
-    <div className="birthday-words-container">
+    <div className="birthday-words-container" style={{backgroundColor: 'rgb(255, 231, 253)'}}>
       {words.map((word, index) => (
           <span key={index} style={wordStyle(index)}>{word}</span>
       ))}
