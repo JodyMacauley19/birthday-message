@@ -1,6 +1,4 @@
 import React from "react";
-import { CSSTransition } from "react-transition-group";
-import styles from '../styles/BirthdayWords.module.css';
 
 
 const BirthdayWords = () => {
@@ -50,13 +48,14 @@ const BirthdayWords = () => {
     "Funny",
     "Passionate",
     "Warmhearted",
-    "Law Student"
+    "Law Student",
+    "You're doing well",
+    "Keep pushing"
   ];
 
-  let color = '';
   const wordStyle = (index) => {
     const fontSize = `${Math.floor(20 + Math.random() * 70)}px`;
-    color = index % 2 === 0 ? 'black' : 'pink';
+    const color = index % 2 === 0 ? 'black' : 'pink';
   
     return {
       fontSize,

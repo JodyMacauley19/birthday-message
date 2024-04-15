@@ -11,7 +11,7 @@
 }
 
 .lyric-container {
-  margin-top: 200px;
+  margin-top: 180px;
   font-size: 15px; /* Adjust lyric size as needed */
   font-weight: bold;
 }
@@ -55,7 +55,7 @@
 
 .clickable-L {
   cursor: pointer;
-  color: rgb(255, 0, 179); /* Optional style for the 'L' */
+  color: pink; /* Optional style for the 'L' */
 
   /* Animation Styles */
   transition: transform 0.2s ease-in-out; /* Transition properties */

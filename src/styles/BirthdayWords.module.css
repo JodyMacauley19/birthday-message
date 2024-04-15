@@ -7,7 +7,7 @@
     position: absolute; /* Ensures absolute positioning within container */
     top: 0; /* Position to the top */
     left: 0; /* Position to the left */
-    width: 100%; /* Covers entire container width */
-    height: 100%; /* Covers entire container height */
+    width: 100vw; /* Covers entire container width */
+    height: 100vh; /* Covers entire container height */
     z-index: -1; /* Place behind other content (optional) */
   }

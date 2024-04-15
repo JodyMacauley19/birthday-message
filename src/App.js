@@ -13,7 +13,7 @@ const App = () => {
   };
 
   return (
-    <div className="container" style={{marginBottom: 'auto'}}>
+    <div className="container" style={{overflow: 'hidden', width: '100vw', height: '100vh'}}>
       {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
       {showBirthdayGreeting && (
         <div className="row justify-content-center">
