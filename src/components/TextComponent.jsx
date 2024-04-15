@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/TextComponent.module.css";
 import {motion, AnimatePresence} from 'framer-motion';
+import blackpingBG from '../img/blackpink.jpg';
+import btsBG from '../img/bts.webp';
+import babymonsterBG from '../img/babymonster.webp';
 
 const kpopGroupImages = [
-  'https://e0.pxfuel.com/wallpapers/2/499/desktop-wallpaper-blackpink-concert-concert.jpg',
-  'https://wallpapercave.com/wp/wp6853359.jpg',
-  'https://wallpapercave.com/wp/wp12332554.jpg'
+  blackpingBG,
+  btsBG,
+  babymonsterBG
 ]
 
 const TextComponent = ({ handleClick }) => {
