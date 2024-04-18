@@ -4,6 +4,7 @@ import ConfettiComponent from "./components/ConfettiComponent";
 import BrickBackground from "./components/BrickBackground";
 import BirthdayGreetingContainer from "./components/BirthdayGreetingContainer";
 import "./styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const [showBirthdayGreeting, setShowBirthdayGreeting] = useState(false);
@@ -13,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <div className="container" style={{overflow: 'hidden', width: '100vw', height: '100vh'}}>
+    <div className="container p-0" style={{overflow: 'hidden', width: '100vw', height: '100vh', maxWidth: '100%'}}>
       {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
       {showBirthdayGreeting && (
         <div className="row justify-content-center">
@@ -27,5 +28,3 @@ const App = () => {
 };
 
 export default App;
-
-// Transparent image

@@ -23,92 +23,83 @@ const TextComponent = ({ handleClick }) => {
 
   return (
     <div
+      className="container-fluid h-100"
       style={{
-        position: "relative",
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
-        width: "100vw",
-        height: "100vh",
+        paddingBottom: "400px",
       }}
     >
-      <div className={styles["text-container"]}>
-        <h1 className={styles.text}>
-          B
-          <span className={styles["clickable-L"]} onClick={handleClick}>
-            L
-          </span>
-          ACK
-          <span style={{ color: "pink" }}>PINK</span>
-        </h1>
-        <div className={styles["lyric-container"]}>
-          <AnimatePresence>
-            <motion.span
-              className={styles["musical-note"]}
-              style={getMusicalNoteStyle()}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            >
-              &#9835;{" "}
-            </motion.span>
-            {backgroundImage.includes("blackpink") && (
+      <div className="row h-100 d-flex justify-content-center align-items-center">
+        <div className="col-10 text-center">
+          <h1 className={`${styles["text"]} text-display text-uppercase`}>
+            B
+            <span className={`${styles["clickable-L"]}`} onClick={handleClick}>
+              L
+            </span>
+            ACK
+            <span style={{ color: "pink" }}>PINK</span>
+          </h1>
+          <div style={{ paddingBottom: "20px" }}>
+            <AnimatePresence>
               <motion.span
-                className={styles.lyric}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                key="song lyric"
-              >
-                Diamonds shining, drive in silence, I don't mind it, I'm riding
-              </motion.span>
-            )}
-            {backgroundImage.includes("bts") && (
-              <motion.span
-                className={styles.lyric}
+                className={styles["musical-note"]}
+                style={getMusicalNoteStyle()}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
               >
-                Don't need no Usher to remind me you got it bad
+                &#9835;{" "}
               </motion.span>
-            )}
-            {backgroundImage.includes("babymonster") && (
+              {backgroundImage.includes("blackpink") && (
+                <motion.span
+                  className={styles.lyric}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                >
+                  Diamonds shining, drive in silence, I don't mind it, I'm
+                  riding
+                </motion.span>
+              )}
+              {backgroundImage.includes("bts") && (
+                <motion.span
+                  className={styles.lyric}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                >
+                  Don't need no Usher to remind me you got it bad
+                </motion.span>
+              )}
+              {backgroundImage.includes("babymonster") && (
+                <motion.span
+                  className={styles.lyric}
+                  style={{ color: "black" }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                >
+                  Let me show you who we are Batter, batter, batter up
+                </motion.span>
+              )}
               <motion.span
-                className={styles.lyric}
-                style={{ color: "black" }}
+                className={styles["musical-note"]}
+                style={getMusicalNoteStyle()}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
               >
-                Let me show you who we are Batter, batter, batter up
+                {" "}
+                &#9835;
               </motion.span>
-            )}
-            <motion.span
-              className={styles["musical-note"]}
-              style={getMusicalNoteStyle()}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            >
-              {" "}
-              &#9835;
-            </motion.span>
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
-      <p
-        style={{
-          position: "absolute",
-          bottom: "5px",
-          left: "50%",
-          transform: "translate(-50%)",
-          textAlign: "center",
-          color: "grey",
-          fontStyle: "italic",
-        }}
-      >
-        © 2024, Jody, All rights reserved.
-      </p>
+      <div className="row h-100 d-flex justify-content-center align-items-center">
+        <p className={styles.copyright}>© 2024, Jody, All rights reserved.</p>
+      </div>
     </div>
   );
 };

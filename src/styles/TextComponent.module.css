@@ -23,8 +23,11 @@
 }
 
 .lyric {
-  font-style: italic; /* Consider italicizing the lyric text */
   color: azure;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* <p className={styles["song-lyric"]}></p> */
@@ -34,9 +37,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 20px;
-  font-style: italic;
-  font-family: 'cursive';
   padding-top: 10%;
   color: rgb(255, 0, 179); /* Optional style for the 'L' */
 }
@@ -47,6 +47,9 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .additionalText {
@@ -59,10 +62,27 @@
 
   /* Animation Styles */
   transition: transform 0.2s ease-in-out; /* Transition properties */
+  font-size: 200px;
+  /* text-shadow: 0px 0px 20px rgb(0, 0, 0); */
+  /* text-decoration: underline black; */
+  
 }
 
-.clickable-l:hover {
-  transform: scale(1.1); /* Hover animation effect */
+.clickable-L:hover {
+  /* transform: scale(1.1); Hover animation effect */
+  animation: pulsate 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .blackpink-background {
@@ -83,4 +103,12 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  /* transform: translateX(-50%);  Shift text horizontally by 50% */
+  /* left: 50%;                    Reference position for translation */
+  text-align: center; 
 }
