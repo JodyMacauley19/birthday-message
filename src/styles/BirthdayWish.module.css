@@ -4,12 +4,12 @@
     font-family: 'cursive';
     font-weight: bold;
     text-align: center; 
-    color: #007bc2; 
+    color: #c20061; 
     line-height: 1.5;
     margin-bottom: auto;
     position: absolute;
-    bottom: 85px;
+    bottom: 150px;
     left: 50%;
     transform: translateX(-50%);
-    text-shadow: rgb(39, 39, 39) 1px 0 10px;
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
   }

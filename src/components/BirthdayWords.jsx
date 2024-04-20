@@ -1,4 +1,5 @@
 import React from "react";
+import styles from '../styles/BirthdayWords.module.css';
 
 
 const BirthdayWords = () => {
@@ -27,10 +28,10 @@ const BirthdayWords = () => {
     "Leo",
     "Hard worker",
     "Disciplined",
-    "Jennie",
+    "Jisoo",
     "Lisa",
     "Rosé",
-    "Jisoo",
+    "Jennie",
     "BOOMBAYAH",
     "DDU-DU DDU-DU",
     "Kill This Love",
@@ -54,21 +55,21 @@ const BirthdayWords = () => {
   ];
 
   const wordStyle = (index) => {
-    const fontSize = `${Math.floor(20 + Math.random() * 70)}px`;
     const color = index % 2 === 0 ? 'grey' : 'grey';
+    const isEven = index % 2 === 0;
   
     return {
-      fontSize,
+      fontSize: isEven ? '50px' : '80px',
       display: 'inline-block',
-      margin: '20px',
+      margin: '15px',
       width: 'fit-content',
       textAlign: 'center',
-      color
+      color,
     };
   };
 
   return (
-    <div className="birthday-words-container" style={{backgroundColor: 'rgb(255, 231, 253)'}}>
+    <div className={styles["birthday-words-container"]} style={{backgroundColor: 'rgb(255, 231, 253)', width: 'fit-content'}}>
       {words.map((word, index) => (
           <span key={index} style={wordStyle(index)}>{word}</span>
       ))}

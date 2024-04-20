@@ -11,14 +11,14 @@ const ConfettiComponent = () => {
     // Set up an interval for continuous rain (optional)
     const confettiInterval = setInterval(() => {
       confettiRef.current?.start();
-    }, 1000); // Adjust interval for rain speed (milliseconds)
+    }, 500); // Adjust interval for rain speed (milliseconds)
 
     return () => clearInterval(confettiInterval); // Cleanup on unmount
   }, []);
 
   return (
     <div className="confetti-container">
-      <Confetti autoPlay numberOfPieces={50} interval={1000} /> {/* Adjust pieces & interval */}
+      <Confetti autoPlay numberOfPieces={100} interval={500} /> {/* Adjust pieces & interval */}
     </div>
   );
 };

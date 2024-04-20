@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <div className="container p-0" style={{overflow: 'hidden', width: '100vw', height: '100vh', maxWidth: '100%'}}>
+    <div className="container p-0" style={{overflow: 'hidden', width: '100vw', height: '100vh', maxWidth: '100%', backgroundColor: 'pink'}}>
       {!showBirthdayGreeting && <TextComponent handleClick={handleClick} />}
       {showBirthdayGreeting && (
         <div className="row justify-content-center">
