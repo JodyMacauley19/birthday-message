@@ -30,7 +30,7 @@ const BirthdayWish = () => {
         transition={{ duration: 3, ease: "easeInOut" }}
         key={currentWishIndex}
       >
-        {wishes[currentWishIndex]}
+        ❤️{wishes[currentWishIndex]}❤️
       </motion.p>
     </AnimatePresence>
   );

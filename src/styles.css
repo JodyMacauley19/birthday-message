@@ -24,3 +24,18 @@ body {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
+
+.toggle-button {
+  background-color: #c20061;
+  outline: none;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: bold;
+}

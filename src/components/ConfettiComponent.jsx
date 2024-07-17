@@ -8,7 +8,7 @@ const ConfettiComponent = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsConfettiActive(true);
-    }, 2000); //Adjust delay in milliseconds
+    }, 1000); //Adjust delay in milliseconds
 
     // Set up an interval for continuous rain (optional)
     const confettiInterval = setInterval(() => {
