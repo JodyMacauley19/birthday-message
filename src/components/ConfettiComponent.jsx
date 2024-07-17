@@ -1,24 +1,31 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Confetti from 'react-confetti';
 
 const ConfettiComponent = () => {
+  const [isConfettiActive, setIsConfettiActive] = useState(false);
   const confettiRef = useRef(null);
 
   useEffect(() => {
-    // Trigger initial confetti burst on component mount
-    confettiRef.current?.start();
+    const timeoutId = setTimeout(() => {
+      setIsConfettiActive(true);
+    }, 2000); //Adjust delay in milliseconds
 
     // Set up an interval for continuous rain (optional)
     const confettiInterval = setInterval(() => {
-      confettiRef.current?.start();
+      if (isConfettiActive) {
+        confettiRef.current?.start();
+      }
     }, 500); // Adjust interval for rain speed (milliseconds)
 
-    return () => clearInterval(confettiInterval); // Cleanup on unmount
+    return () => {
+      clearInterval(confettiInterval); // Cleanup on unmount
+      clearTimeout(timeoutId);
+    }
   }, []);
 
   return (
     <div className="confetti-container">
-      <Confetti autoPlay numberOfPieces={100} interval={500} /> {/* Adjust pieces & interval */}
+      {isConfettiActive && <Confetti autoPlay numberOfPieces={100} interval={500} />} {/* Adjust pieces & interval */}
     </div>
   );
 };
