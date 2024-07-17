@@ -1,5 +1,6 @@
 import React from "react";
-import exampleImg from '../img/example_girl.jpg';
+// import exampleImg from '../img/example_girl.jpg';
+import exampleImg from '../img/bgirl_test.jpg';
 import styles from '../styles/BirthdayGirlImage.module.css';
 import {motion, AnimatePresence} from 'framer-motion';
 
