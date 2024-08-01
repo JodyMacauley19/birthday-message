@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/birthday-message/static/css/main.1ef3a26c.css",
+    "main.js": "/birthday-message/static/js/main.4fef01bb.js",
+    "static/media/blackpink.jpg": "/birthday-message/static/media/blackpink.02cbe8579a7f7f672efb.jpg",
+    "static/media/bts.webp": "/birthday-message/static/media/bts.7746795580e9ee03cf11.webp",
+    "static/media/babymonster.webp": "/birthday-message/static/media/babymonster.40dd51ffbeca5ba326d0.webp",
+    "static/media/bgirl_test.jpg": "/birthday-message/static/media/bgirl_test.dcd86094d870c255772f.jpg",
+    "index.html": "/birthday-message/index.html",
+    "main.1ef3a26c.css.map": "/birthday-message/static/css/main.1ef3a26c.css.map",
+    "main.4fef01bb.js.map": "/birthday-message/static/js/main.4fef01bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ef3a26c.css",
+    "static/js/main.4fef01bb.js"
+  ]
+}
